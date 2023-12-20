@@ -349,7 +349,7 @@
     }
 }
 
-@media(max-width: 430rem){
+@media(max-width: 430px){
     .headerNav{
         height: 60vh;
     }
