@@ -1,38 +1,492 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200;0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+    font-family: sans-serif;
+    overflow-X: hidden;
+    position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.headerNav{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/public/images/header7.jpeg');
+    background-size: cover;
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    padding: 2.3rem;
+    color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.mobile-nav{
+    display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 0.7rem;
+}
+
+.head h3{
+    font-size: 1.88rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.nav-links{
+    display: flex;
+    gap: 3.4rem;
+}
+
+.nav-link{
+    list-style: none;
+}
+
+.nav-link a,.head-info a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.headerNav h2{
+    letter-spacing: 1.3rem;
+    font-size: 22rem;
+    text-transform: uppercase;
+    font-family: 'Source Serif 4', serif;
+    transform: translateY(-1rem);
+
+}
+
+.head-info{
+    transform: translateY(-3rem);
+    display: flex;
+    align-items: center;
+    padding: 0rem 0.7rem;
+    justify-content: space-between;
+}
+
+.head-info p span{
+    display: block;
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/*********************************/
+/********* ABOUT SECTION *********/
+/*********************************/
+.about-section{
+    padding: 10rem 3rem 8rem 3rem;
+}
+
+.about-text{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 14rem;
+}
+
+.about-text span{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: 'Source Serif 4', serif;
+}
+
+.about-head{
+    flex-basis: 60%;
+}
+
+.about-head h3{
+    font-size: 3.6rem;
+    font-family: 'Source Serif 4', serif;
+    line-height: 4.4rem;
+    padding-bottom: 3.5rem;
+}
+
+.about-head p{
+    font-size: 1.45rem;
+    padding-right: 15rem;
+    line-height: 2rem;
+    color: #555;
+}
+
+.about-boxes{
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-box h6{
+    font-family: 'Source Serif 4', serif;
+    font-size: 2.7rem;
+}
+
+.about-box{
+    border: 2px solid #aaa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1.3rem;
+    text-align: center;
+    height: 35rem;
+    width: 35rem;
+}
+
+.circle{
+    border-radius: 50%;
+}
+
+.about-box span{
+    font-size: 1.3rem;
+    padding: 1.3rem 1.55rem;
+    line-height: 2rem;
+    color: #888;
+}
+
+/*******************************/
+/****** Projects ***************/
+/*******************************/
+.project-section{
+    background-color: #000;
+    padding: 7rem 2.5rem;
+}
+
+.project-head{
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 4rem;
+}
+
+.project-head h2{
+    color: #fff;
+    font-size: 13rem;
+    font-family: 'Source Serif 4', serif;
+    text-transform: uppercase;
+    flex-basis: 90%;
+}
+
+.project-head div{
+    flex-basis: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+    transform: translateY(-4rem);
+}
+
+.project-head div a{
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.project-content{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding-bottom: 15rem;
+}
+
+.proj-img{
+    width: 44rem;
+    padding-bottom: 0.4rem;
+}
+
+.proj-img img{
+    width: 100%;
+    border-radius: 7px;
+}
+
+.proj-content{
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    align-items: start;
+}
+
+.proj-content span{
+    font-size: 1.4rem;
+    color: #888;
+    transform: translateY(0.6rem);
+}
+
+.proj-content a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.project-name p{
+    font-family: 'Source Serif 4', serif;
+    font-size: 2rem;
+    color: #fff;
+    padding-bottom: 0.2rem;
+}
+
+.services-section h6{
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-family: 'Source Serif 4', serif;
+    padding-bottom: 4rem;
+}
+
+.services{
+    display: flex;
+    flex-direction: column;
+    gap: 2.6rem;
+}
+
+.service{
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr;
+    color: #fff;
+}
+
+.service span{
+    font-size: 1.8rem;
+}
+
+.serv-num{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.serv-num span{
+    font-size: 1.6rem;
+}
+
+.service a{
+    font-size: 1.8rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.service p{
+    font-size: 4.2rem;
+    font-family: 'Source Serif 4', serif;
+}
+
+.section-design{
+    padding-top: 14rem;
+    padding-right: 3rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 15rem;
+}
+
+.section-design h4{
+    font-size: 4.7rem;
+    padding-bottom: 3rem;
+    font-family: 'Source Serif 4', serif;
+    line-height: 3.8rem;
+}
+
+.design-text{
+    padding-left: 10rem;
+}
+
+.design-text p{
+    color: #bbb;
+    font-size: 1.4rem;
+    padding-bottom: 4rem;
+}
+
+.des{
+    padding-left: 5rem;
+}
+
+.design-text span{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.design-text a{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: #Fff;
+    text-decoration: none;
+}
+
+.design-img{
+    width: 95%;
+}
+
+.design-img img{
+    width: 100%;
+}
+
+/**********************************/
+/********* LATEST ARTICLE *********/
+/**********************************/
+.latest-section{
+    padding: 7rem 3rem ;
+}
+
+.latest-section h3{
+    font-family: 'Source Serif 4', serif;
+    font-size: 3.4rem;
+    text-align: center;
+    padding-bottom: 6rem;
+}
+
+.latest{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    justify-content: center;
+    padding-bottom: 10rem;
+}
+
+.latest-img{
+    width: 38rem;
+    height: 38rem;
+}
+
+.latest-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.latest-text{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+}
+
+.latest-text div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.latest-text p{
+    font-size: 2rem;
+}
+
+.sub-link{
+    font-size: 2.3em;
+    text-decoration: none;
+}
+
+.sub-text{
+    font-size: 1.4rem;
+    color: #555;
+}
+
+.section-img img{
+    width: 50rem;
+    height: 50rem;
+}
+
+.section-img img{
+    width: 100%;
+}
+
+.latest-grid{
+    padding-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25rem;
+    justify-content: space-between;
+}
+
+.latest-grid h6{
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: 'Source Serif 4', serif;
+}
+
+.latest-grid p{
+    font-size: 1.4rem;
+    color: #333;
+    padding-bottom: 1rem;
+}
+
+.latest-grid a{
+    color: #000;
+    text-decoration: none;
+    font-size: 1.45rem;
+}
+
+/********************************/
+/********** FOOTER LINKS ********/
+/********************************/
+.footer-section{
+    background-color: #000;
+    padding: 4rem 3rem;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    border-top: 1px solid #999;
+    padding-top: 4rem;
+    gap: 19rem;
+    padding-bottom: 2rem;
+}
+
+.footer-box h6{
+    color: #fff;
+    padding-bottom: 1.7rem;
+    font-size: 1.5rem;
+    font-family: 'Source Serif 4', serif;
+}
+
+.footer-box span{
+    font-size: 1.3rem;
+    color: #bbb;
+}
+
+.footer-links li a{
+    color: #bbb;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.footer-links{
+    display: flex;
+    gap: 1.2rem;
+    flex-direction: column;
+}
+
+.icon{
+    display: flex;
+    gap: 1.4rem;
+}
+
+.footer-icon img{
+    width: 2.4rem;
+}
+
+.footer-name h1{
+    color: #fff;
+    font-size: 30rem;
+    text-transform: uppercase;
+    font-family: 'Source Serif 4', serif;
+    height: 100%;
+    overflow-y: hidden;
+  
+}
+
+.footer-name{
+    height: 24rem;
+    position: relative;
 }
